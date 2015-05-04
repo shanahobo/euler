@@ -1,0 +1,125 @@
+/*!
+ * Copyright 2015 Niall Shannon.
+ */
+ 
+ .black-border{
+ 	border-color: #000;
+ 	margin-top: 0px;
+ }
+
+.custom-footer {
+  background-image: url("../images/footerImg.jpg");
+  height: 100px;
+  background-position: center center;
+}
+
+.footerText{
+	padding-left:20px;
+	color: white;
+	position:absolute;
+	bottom:0;
+}
+
+.footerText a{
+	color: white;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 150%;
+    margin: 0 auto -150px; /* the bottom margin is the negative value of the footer's height */
+}
+.custom-footer, .push {
+    height: 150px; /* .push must be the same height as .footer */
+}
+
+.mobile-navbar{
+	padding-top:20px;
+}
+   	
+
+#menu-icon {
+	display: none;
+	width: 40px;
+	height: 40px;
+	background-image: url("../images/menu-icon.jpg");
+	float:right;
+}
+
+#navigation-dom{
+ 	list-style-type: none;
+}
+
+#navigation-dom li { 
+	color: #000000;
+  	text-decoration: none;
+  	font-size: 1.75em;
+  	font-family: fantasy;
+  	display:inline;
+  	padding-left: 20px;
+}
+
+.nav-menu{
+	padding-top: 85px;
+}
+
+.logo {
+	padding-left: 20px;
+}
+
+#navigation-dom li a {
+	color: #000000;
+}
+
+.logo-container{
+	  padding-top: 20px;
+	  width: 200px;
+	  float: left;
+}
+
+#content-div{
+	padding-top: 100px;
+}
+
+
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 760px) {
+
+	#menu-icon {
+		display:inline;
+	}
+	
+	#navigation-dom{
+		display: none;
+	}
+	
+	.custom-footer {
+	  height: 35px;
+	  width: 100%;
+	  background-size:cover;
+	}
+	
+	.wrapper {
+		height: 35%;
+		margin: 0 auto -20px;
+	}
+	.custom-footer, .push {
+		height: 35px; /* .push must be the same height as .footer */
+	}
+	
+	.logo {
+		padding-left: 5px;
+		height:40px;
+		width:62px;
+	}
+	
+	.footerText{
+		display:none;
+	}
+	
+	.nav-menu{
+		padding-top: 50px;
+	}
+}
