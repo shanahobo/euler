@@ -10,29 +10,30 @@
 <body>
 	<div class = "wrapper">
 	
-	 <div class="container">
+	 <div class="container" ng-controller="viewController as view" ng-init="view.setView(0)">
       
-	   	<div class ="logo-container" ng-controller="viewController as view" ng-init="view.setView(0)"> 	   	
+	   	<div class ="logo-container"> 	   	
 	   		<a href="#"><img class="logo" alt="Niall Shannon" src="style/images/logo.jpg"></img></a>
 	   	</div>
 	   	
 	   	<div class="mobile-navbar"><a href="#" id="menu-icon" ng-click="alert('button clicked')"></a></div><!-- for mobile navbar -->
 	   	
-   		<div class="nav-menu">
+   		<div class="nav-menu" >
    			<ul id="navigation-dom">
-	        <li><a ng-click="view.setView(1)" href="#">Expertise</a></li>
-	        <li><a ng-click="view.setView(2)" href="#">Projects</a></li>
-	        <li><a ng-click="view.setView(3)" href="#">Downloads</a></li>
-	        <li><a ng-click="view.setView(4)" href="#">About</a></li>
-	        <li><a ng-click="view.setView(5)" href="#">Contact</a></li>
+	        <li ng-repeat="link in view.links"><a href="#"  ng-click="view.setView(link.id)">{{link.title}}</a></li>
 	      </ul>
    		</div>	  
+   		
    		
    		<hr class="black-border"/>    
       
      <!-- 
      
      <section ng-controller="TabController as panel" ng-init="panel.setTab(1)">
+     
+     
+     
+     
                 <ul class="nav nav-pills">
                     <li ng-class="{active:panel.isSet(1)}">
                         <a href ng-click="panel.setTab(1)">Description</a>
