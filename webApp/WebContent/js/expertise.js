@@ -1,4 +1,4 @@
-  var app = angular.module('webApp.expertise', [])
+  var app = angular.module('portfolio.expertise', [])
   
   /**
    app.directive("productDescription", function() {

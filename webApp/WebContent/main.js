@@ -1,9 +1,23 @@
 
-angular.module('webApp', [/**"contact", "about", **/"webApp.expertise" /**, "projects", "downloads" **/])
-
+angular.module('webApp', ['ngRoute']).config(function($routeProvider) {
+	$routeProvider.when("/", 
+			{
+				template: "<h1>this is the main page</h1>",
+				controller: "webAppController"
+			});	
+	$routeProvider.when("/Expertise", 
+			{
+				templateUrl: "partials/expertise.html",
+				controller: "js/expertise.js"
+			});
+	$routeProvider.otherwise({
+				templateUrl: "This link does not exist"
+			});
+	
+})
 
 	.controller('webAppController', function() {
-
+			console.log("main page");
 	})
 	
 	.controller('viewController', function() {
@@ -13,13 +27,5 @@ angular.module('webApp', [/**"contact", "about", **/"webApp.expertise" /**, "pro
 		              {"title":"Downloads", "id": "3"},
 		              {"title":"About", "id": "4"},
 		              {"title":"Contact", "id": "5"}];
-		
-        this.tab = 1;
-        this.setView = function(id) {
-            this.view = id;
-        };
-        this.isSet = function(id) {
-            return (this.view === id);
-        };
     })
   

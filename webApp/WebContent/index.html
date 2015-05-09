@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app = "webApp">
+<html>
 <head>
 <title>Niall Shannon</title>
 <meta name="viewport" content="width=device-width" />
@@ -7,76 +7,25 @@
 <link rel="stylesheet" type="text/css" href="style/css/custom.css">
 
 </head>
-<body>
+<body ng-app="webApp">
 	<div class = "wrapper">
 	
-	 <div class="container" ng-controller="viewController as view" ng-init="view.setView(0)">
+	 <div class="container" ng-controller="viewController as view">
       
-	   	<div class ="logo-container"> 	   	
+	   	<div class ="logo-container">
 	   		<a href="#"><img class="logo" alt="Niall Shannon" src="style/images/logo.jpg"></img></a>
 	   	</div>
 	   	
-	   	<div class="mobile-navbar"><a href="#" id="menu-icon" ng-click="alert('button clicked')"></a></div><!-- for mobile navbar -->
+	   	<div class="mobile-navbar"><a href="#" id="menu-icon" ng-mouseenter="console.log('button clicked')"></a></div><!-- for mobile navbar -->
 	   	
    		<div class="nav-menu" >
-   			<ul id="navigation-dom">
-	        <li ng-repeat="link in view.links"><a href="#"  ng-click="view.setView(link.id)">{{link.title}}</a></li>
+   			<ul id="navigation-dom" ng-show="view.links">
+	        <li ng-repeat="link in view.links"><a href="#/{{link.title}}">{{link.title}}</a></li>
 	      </ul>
-   		</div>	  
-   		
-   		
+   		</div>   		
    		<hr class="black-border"/>    
-      
-     <!-- 
-     
-     <section ng-controller="TabController as panel" ng-init="panel.setTab(1)">
-     
-     
-     
-     
-                <ul class="nav nav-pills">
-                    <li ng-class="{active:panel.isSet(1)}">
-                        <a href ng-click="panel.setTab(1)">Description</a>
-                    </li>
-                    <li ng-class="{active:panel.isSet(2)}">
-                        <a href ng-click="panel.setTab(2)">Specifications</a>
-                    </li>
-                    <li ng-class="{active:panel.isSet(3)}">
-                        <a href ng-click="panel.setTab(3)">Reviews</a>
-                    </li>
-                </ul>
-                <div class="panel" ng-show="panel.isSet(1)">
-                    <product-description></product-description>
-                </div>
-                <div class="panel" ng-show="panel.isSet(2)">
-                    <product-specifications></product-specifications>
-                </div>
-                <div class="panel" ng-show="panel.isSet(3)">
-                    <product-ratings></product-ratings>
-                </div>
-        </div>
-        </section>
-
- 	 -->
-	    
-		  
-		   
-		   <h1>This is some test content</h1>
-			
-			<h3> blablabla</h3>
-			<p>babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf </p>
-			
-			
-			<h3> blablabla</h3>
-			<p>babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf </p>
-			
-			
-			<h3> blablabla</h3>
-			<p>babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf </p>
-			
-			
-			<h3> blablabla</h3>
-			<p>babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf babab asdasd asdfasdfsadf </p>
+    	
+    	<ng-view></ng-view>
 
 
 		    </div> <!-- /container -->
@@ -88,7 +37,8 @@
 			<p class="footerText">&copy; <a href="index.html">Niall Shannon</a> 2015</p>	
 		</div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
 <script src="main.js"></script>
-<script src="expertise.js"></script>
+<script src="js/expertise.js"></script>
 </html>
