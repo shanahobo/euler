@@ -1,11 +1,11 @@
-import java.util.Arrays;
+
 
 public class MergeArr{
 	
     public static void main(String[] args) {
     	
      	
-    	String [] words = {"cat", "cviic"};
+    	String [] words = {"cat", "cvic"};
     	
     	for(int i = 0; i<words.length; i++){
              
