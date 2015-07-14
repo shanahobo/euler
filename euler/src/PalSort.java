@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Hashtable;
 import java.util.List;
 import org.apache.commons.lang.StringUtils;
 
@@ -35,21 +34,7 @@ public class PalSort {
 	"As I pee, sir, I see Pisa!",
 	"Avid diva."
 	};
-	
-	
-	static String[] list2 = {
-		"abodef i fedoba",
-		"Borrow or rob?",
-		"apple",
-		"not a palindrome",
-		"abode fife doba",
-		"orange",
-		"a b o d e f i f e d o b a",
-		};
-	
-	
-	static Hashtable<String, List<Integer>> table = new Hashtable<String,List<Integer>>();
-	
+
 	
 	public static void main(String[] args)
 	{
