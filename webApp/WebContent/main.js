@@ -8,7 +8,7 @@ var app = angular.module('webApp', ['ngRoute']).config(function($routeProvider) 
 	$routeProvider.when("/Expertise", 
 			{
 				templateUrl: "partials/expertise.html",
-				controller: "js/expertise.js"
+				controller: "expertiseController"
 			});
 	$routeProvider.otherwise({
 				templateUrl: "This link does not exist"
@@ -50,4 +50,11 @@ var app = angular.module('webApp', ['ngRoute']).config(function($routeProvider) 
 		              {"title":"About", "id": "4"},
 		              {"title":"Contact", "id": "5"}];
     })
+    
+    app.controller('expertiseController', function() {
+		
+		this.expertise = [{"title":"Technical Skills", "id": "1"},
+		              {"title":"Tools I work with", "id": "2"},
+		              {"title":"Other Skills", "id": "3"}];
+  })
   
