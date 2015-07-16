@@ -1,4 +1,9 @@
 <div>
 	<h1>This is testing the expertise page</h1>
+	<div class="nav-menu" ng-controller="expertiseController">
+   			<ul id="navigation-dom" ng-show="view.expertise">
+	        <li ng-repeat="skills in view.expertise"><p>{{link.title}}</li>
+	      </ul>
+   		</div>   		
 			
 </div>

@@ -1,5 +1,13 @@
   var app = angular.module('portfolio.expertise', [])
   
+  
+  app.controller('expertiseController', function() {
+		
+		this.expertise = [{"title":"Technical Skills", "id": "1"},
+		              {"title":"Tools I work with", "id": "2"},
+		              {"title":"Other Skills", "id": "3"}];
+  })
+  
   /**
    app.directive("productDescription", function() {
     return {

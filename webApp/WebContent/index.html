@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="style/css/custom.css">
 
 </head>
-<body ng-app="webApp">
+<body ng-app="webApp" ng-controller="webAppController">
 	<div class = "wrapper">
 	
 	 <div class="container" ng-controller="viewController as view">
@@ -16,9 +16,9 @@
 	   		<a href="#"><img class="logo" alt="Niall Shannon" src="style/images/logo.jpg"></img></a>
 	   	</div>
 	   	
-	   	<div class="mobile-navbar"><a href="#" id="menu-icon" ng-mouseenter="console.log('button clicked')"></a></div><!-- for mobile navbar -->
+	   	<div class="mobile-navbar"><a href="#" id="menu-icon" ng-click="displayMenu()" ng-mouseenter="logMouseEvent()" ng-mouseleave="logMouseEvent()"></a></div><!-- for mobile navbar -->
 	   	
-   		<div class="nav-menu" >
+   		<div class="nav-menu" ng-controller="viewController">
    			<ul id="navigation-dom" ng-show="view.links">
 	        <li ng-repeat="link in view.links"><a href="#/{{link.title}}">{{link.title}}</a></li>
 	      </ul>
