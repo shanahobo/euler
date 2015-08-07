@@ -41,7 +41,7 @@ it cannot be solved by brute force, and requires a clever method! ;o)
 
 **/
 
-class euler_18
+class Euler_18
 {
 	public static void main (String[] args) throws FileNotFoundException
 	{
