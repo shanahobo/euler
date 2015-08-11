@@ -23,8 +23,6 @@ public class Euler_11
 		
 		int maxSum = 0;
 		int sum = 0;
-		int [] digits = new int [4];
-		
 		for(int x = 0; x < 339; x ++){
 		    maxSum = tall[x]*tall[x+20]*tall[x+40]*tall[x+60];
 			if(maxSum>sum){
